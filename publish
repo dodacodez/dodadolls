@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+if [[ ! '' == `git status --porcelain` ]]
+then
+  read -p "The lastest local changed are not saved on GitHub yet. Do you want me to push them before publish the site?  " -n 1 -r
+  echo
+  if [[ ! $REPLY =~ ^[Yy]$ ]]
+  then
+    [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1
+  fi
+fi
+git add .
+git commit -m "publishing"
+git push origin master
+git checkout gh-pages
+git pull origin master
+git push origin gh-pages
+git checkout master
+echo "Congrats! Your site was published successfully!"
