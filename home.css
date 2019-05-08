@@ -1,0 +1,59 @@
+.MainCta a {
+  color: white;
+  text-decoration: none;
+  outline: none;
+}
+
+.MainCta img {
+  width: 100%
+}
+
+.MainCta span {
+  display: block;
+  background-color: #eb12b3;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 0 20px #793166;
+  position: absolute;
+  /*top: 50%;*/
+  /*transform: translateY(-50%);*/
+  /*text-align: center;*/
+  bottom: 0;
+  font-size: 1.3em;
+}
+
+@media (min-width: 768px) {
+  .MainCta {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .MainCta a {
+    width: 50%;
+    padding-bottom: 50%;
+    transition: box-shadow 0.15s ease-in, transform 0.15s ease-in, filter 0s 0.1s linear;
+  }
+
+  .supportsMouse .MainCta span {
+    opacity: 0;
+  }
+
+  .supportsMouse .MainCta a:hover span,
+  .supportsMouse .MainCta a:focus span {
+    transition: opacity 0.15s 0.15s ease-in-out;
+    opacity: 0.9;
+  }
+}
+
+.MainCta a:hover,
+.MainCta a:focus {
+  box-shadow: 0 10px 50px #793166;
+  transform: translateY(-5px) translateX(-5px);
+  -webkit-filter: hue-rotate(300deg);
+  filter: hue-rotate(300deg);
+}
+
+.MainCta a:nth-child(even):hover,
+.MainCta a:nth-child(even):focus {
+  transform: translateY(-5px) translateX(5px);
+}

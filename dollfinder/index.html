@@ -1,0 +1,71 @@
+<!doctype html>
+<html class="supportsMouse">
+<head>
+<meta charset="utf-8">
+<title>DodaDolls | Doll Finder</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Let me find your dream doll for you!">
+<meta name="keywords" lang="de" content="Puppensuche, Puppenfinder, Barbiefinder, Barbie, Puppen, finde, kaufen, Bestellung, Suche, Suchmaschine, Hilfe, Traumpuppe, Recherche, Dodadolls">
+<meta name="keywords" lang="en-us" content="dollsearch, dollfinder, Barbiefinder, Barbie, dolls, finding, buy, order, search, search engine, help, dreamdoll, dream doll, research, Dodadolls">
+<link href="../common.css" rel="stylesheet">
+<link href="./dollfinder.css" rel="stylesheet">
+<link href="https://embed.typeform.com/embed.js" rel="preload" as="script">
+<script>
+  document.addEventListener('touchmove', function () {
+    document.documentElement.classList.add('supportsMouse')
+  }, { once: true })
+  document.addEventListener('touchstart', function () {
+    document.documentElement.classList.add('supportsMouse')
+  }, { once: true })
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-53931672-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-53931672-2');
+</script>
+</head>
+
+<body>
+  <div class="Page">
+    <h1><a href="../"><img src="../images/logo.png" alt="DodaDolls"></a></h1>
+    <div class="Separator"></div>
+
+    <div class="Form ResponsiveContainer">
+      <div class="typeform-widget" data-url="https://dora635458.typeform.com/to/jCucyS" data-transparency="35" data-hide-headers=true data-hide-footer=true></div>
+    </div>
+    <div class="LangSelector">
+      <p>Choose your language/Sprache/jezyk</p>
+      <div>
+        <button data-url="https://dora635458.typeform.com/to/jCucyS" title="English">🇬🇧</button>
+        <button data-url="https://dora635458.typeform.com/to/StuJaj" title="Deutsch">🇩🇪</button>
+        <button disabled title="Polski">🇵🇱</button>
+      </div>
+
+      <div class="ResponsiveContainer ResponsiveContainer--crop" style="padding-bottom: 55%">
+        <img src="https://scontent-vie1-1.xx.fbcdn.net/v/t1.0-9/57226323_1988677411236113_2960622915361439744_o.jpg?_nc_cat=100&_nc_ht=scontent-vie1-1.xx&oh=afa129e7197b137eb75e92b2a5639a5e&oe=5D324D75" alt="DollFinder" role="presentation">
+      </div>
+    </div>
+
+    <div class="Separator"></div>
+
+    <footer>© DodaDolls</footer>
+  </div>
+  <script>
+    (function () {
+      var selector = document.querySelector('.LangSelector')
+      selector.querySelector('div').addEventListener('click', function (event) {
+        document.querySelector('.typeform-widget').setAttribute('data-url', event.target.getAttribute('data-url'))
+        document.querySelector('.Form').classList.add('is-active')
+        selector.parentNode.removeChild(selector)
+        var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) }
+      }, { once: true })
+    }())
+  </script>
+</body>
+</html>
+
