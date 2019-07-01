@@ -31,3 +31,10 @@ h1 span span {
   border: 0;
   font-size: 60px;
 }
+
+@media (min-width: 768px) {
+  .Offers {
+    display: flex;
+    background-color: white;
+  }
+}
