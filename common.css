@@ -5,8 +5,8 @@
 body {
   font-size: 16px;
   font-family: apercu-pro, -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-  background-color: #e91e63;
-  background-image: linear-gradient(to right top, #e91e63, #ee0c75, #f00088, #ef009d, #eb12b3);
+  background-color: #8bae00;
+  background-image: linear-gradient(to right top, #04d4f6, #8bae00);
   background-repeat: no-repeat;
   min-height: 100vh;
   color: white;
