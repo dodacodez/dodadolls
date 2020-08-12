@@ -7,6 +7,9 @@
 <meta name="description" content="Enter Doda's Doll Universe - Steffie mold Barbie dolls, doll art and fashion">
 <meta name="keywords" lang="en-us" content="Dodadolls, dolls, Barbie, collector, collectables, fashion dolls, art, reroot, OOAK, doll photography, Vienna, Austria, Germany, EU, rare, market, haul, colourful, dolliverse, dollfluencer, dollstagram, Steffie mold, Midge, vintage, Whitney, Ultra Hair Barbie, Cara, Christie, Kelley, Mattel, fashion, dollfashion, designs, diorama, shop, unique">
 <meta name="keywords" lang="de" content="Puppen, Barbies, Barbiepuppen, Sammler, Raritäten, Sammlung, Steffie, WHitney, Christie, Cara, Kelley, Puppensuche, Wien, Europa, Flohmarkt, Funde, rar, Puppenmama, Kunst, Puppenkunst, Gestaltung, Puppenuniversum, Fotografie, Mode, Design, Diorama, Miniatur, Shop, Unikate">
+
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet">
+
 <link href="./common.css" rel="stylesheet">
 <link href="./home.css" rel="stylesheet">
 <link rel="icon" type="image/jpeg" href="./images/favicon.jpg" />
@@ -17,6 +20,13 @@
   document.addEventListener('touchstart', function () {
     document.documentElement.classList.add('supportsMouse')
   }, { once: true })
+  function fixFormKit() {
+    setTimeout(() => {
+      document.querySelector('[data-formkit]').appendChild(
+        document.querySelector('.formkit-sticky-bar')
+      )
+    }, 1000)
+  }
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -48,11 +58,30 @@
   </div>
   <div class="Page">
     <h1><a href="./"><img src="./images/logo.png" alt="DodaDolls"></a></h1>
-    <p>My name is Doda and I am a passionate and avid Barbie collector. At DodaDolls you can find pictures of unique dolls, hybrids and their fashions, doll art and inspiration. Click on the links to get to all the places where you can discover your own dream dolls. Enjoy the ride!
-      <p>
-        [please note: pictures + content is © DodaDolls. reproduction, sharing or altering without written consent is prohibited.]
+    <nav class="Menu">
+      <a href="./instagram.html">news</a>
+      <a href="./aboutdoda.html">about Doda</a>
+      <a href="./dollfinder/index.html">doll deals/dollfinder</a>
+      <a href="">fun ideas</a>
+      <a href="https://www.etsy.com/shop/glittergifgirlfriend" target = "_blank">etsy</a>
+      <a href="https://instagram.com/dodadollstore" target = "_blank">DodaDoll store</a>
+      <span style="flex:1"></span>
+      <a href="https://facebook.com/dodadolls" target = "_blank" style="filter: hue-rotate(240deg) contrast(2);"><img src="http://facebook.com/favicon.ico" alt="facebook"></a>
+      <a href="https://instagram.com/dodadolls" target = "_blank" style="filter: hue-rotate(210deg) contrast(1.5);"><img src="http://instagram.com/favicon.ico" alt="instagram"></a>
+    </nav>
+
+    <p>My name is Doda and I am a passionate and avid Barbie collector from Austria. At DodaDolls you can find pictures of my collection, one of a kind doll creations, hybrids, rarities, as well as diorama/DIY inspirations and doll art. My DollFinder shall assist your search for your grail doll. The online doll community is such a great place to be and I am happy to be involved with it!</p>
+
+    <p><blockquote>
+    When I was 8 years old I fell in love with Mattel's Jewel Secrets Whitney and made a silent promise to myself: <br>"When I grow up, I shall get all the Barbies I always dreamed of." </blockquote>
+  Over 20 years later I can look at a small but solid collection of boxed and unboxed Steffie mold dolls, Superstar Barbies and modern Fashionistas. It gives me enormous joy to photograph and pose my hybrid dolls or create rooms for their doll events. You can find my deboxing videos on YouTube. Let me invite you on a colourful trip into the amazing world of DodaDolls!</p>
+
+      Click on the links to get to all the places where you can discover your own dream dolls. Enjoy the ride!
+      <p><small>
+        please note: pictures + content is © DodaDolls. reproduction, sharing or altering without written consent is prohibited.</small>
       </p>
     </p>
+
     <div class="Separator"></div>
 
     <nav class="MainCta">
@@ -72,7 +101,7 @@
         <img src="./images/dollfinderpic.jpg" alt="DollFinder" role="presentation">
         <span>DollFinder</span>
       </a>
-      <a class="ResponsiveContainer ResponsiveContainer--crop" href="https://instagram.com/glittergifgirlfriend" target="_blank">
+      <a class="ResponsiveContainer ResponsiveContainer--crop" href="http://www.instagram.com/dodadolls" target="_blank">
         <img src="./images/deerdoll.jpg" alt="
         instagram" role="presentation">
         <span>instagram</span>
@@ -92,11 +121,29 @@
         Etsy" role="presentation">
         <span>Etsy</span>
       </a>
-      <a class="ResponsiveContainer ResponsiveContainer--crop" href="https://facebook.com/dodadolls">
+      <a class="ResponsiveContainer ResponsiveContainer--crop" href="https://facebook.com/dodadolls" target="_blank">
         <img src="./images/dollgroup.jpg" alt="Facebook" role="presentation">
         <span>Facebook</span>
       </a>
     </nav>
+
+    <div class="Separator"></div>
+
+    <style>
+      [data-formkit] {
+        min-height: 149px;
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+      .formkit-sticky-bar {
+        display: block !important;
+        position: static !important;
+      }
+      .formkit-sticky-bar form {
+        box-shadow: none !important;
+      }
+    </style>
+    <div data-formkit></div>
+    <script async data-uid="b0b14169a5" src="https://dodadolls.ck.page/b0b14169a5/index.js" onload="fixFormKit()"></script>
 
     <div class="Separator"></div>
 
