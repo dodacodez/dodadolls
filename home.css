@@ -29,8 +29,8 @@
   }
 
   .MainCta a {
-    width: 50%;
-    padding-bottom: 50%;
+    width: 33.3%;
+    padding-bottom: 33.3%;
     transition: box-shadow 0.15s ease-in, transform 0.15s ease-in, filter 0s 0.1s linear;
   }
 
