@@ -1,4 +1,4 @@
-.MainCta a {
+.MainCta > * {
   color: white;
   text-decoration: none;
   outline: none;
@@ -28,7 +28,7 @@
     flex-wrap: wrap;
   }
 
-  .MainCta a {
+  .MainCta > * {
     width: 33.3%;
     padding-bottom: 33.3%;
     transition: box-shadow 0.15s ease-in, transform 0.15s ease-in, filter 0s 0.1s linear;

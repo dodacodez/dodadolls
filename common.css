@@ -69,18 +69,19 @@ body {
 
 h1 {
   font-weight: 300;
-  margin-left: -4.3rem;
   margin-bottom: 0;
 }
 
 a { text-decoration: none }
 a:hover { text-decoration: underline; }
-h1 a {
+
+.Logo {
   color: white;
   text-decoration: none;
+  margin-left: -4.3rem;
+  display: block;
+  height: 10rem
 }
-
-h1 img { height: 10rem }
 
 h1 + p { margin-top: 0; }
 
