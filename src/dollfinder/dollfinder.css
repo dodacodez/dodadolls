@@ -1,0 +1,40 @@
+h1,
+h1 > span {
+  display: flex;
+  align-items: center;
+}
+
+h1 > span {
+  justify-content: space-between;
+  flex: 1;
+}
+
+h1 span span {
+  font-weight: 400;
+}
+
+.Form { display: none }
+.Form.is-active {
+  display: block;
+  padding-bottom: 60%;
+}
+
+
+.LangSelector {
+  text-align: center
+}
+
+.LangSelector button {
+  cursor: pointer;
+  background: none;
+  padding: 0;
+  border: 0;
+  font-size: 60px;
+}
+
+@media (min-width: 768px) {
+  .Offers {
+    display: flex;
+    background-color: white;
+  }
+}
