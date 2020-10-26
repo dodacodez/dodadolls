@@ -9,6 +9,7 @@ then
     [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1
   fi
 fi
+xm build --output _dist
 git add .
 git commit -m "publishing"
 git push origin master
