@@ -1,49 +1,16 @@
-<!doctype html>
-<html class="supportsMouse">
-<head>
-<meta charset="utf-8">
-<title>DodaDolls | Doll Finder</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Let me find your dream doll for you!">
-<meta name="keywords" lang="de" content="Puppensuche, Puppenfinder, Barbiefinder, Barbie, Puppen, finde, kaufen, Bestellung, Suche, Suchmaschine, Hilfe, Traumpuppe, Recherche, Dodadolls">
-<meta name="keywords" lang="en-us" content="dollsearch, dollfinder, Barbiefinder, Barbie, dolls, finding, buy, order, search, search engine, help, dreamdoll, dream doll, research, Dodadolls, Alza">
-<link href="../common.css" rel="stylesheet">
-<link href="./dollfinder.css" rel="stylesheet">
-<link rel="icon" type="image/jpeg" href="../images/favicon.jpg" />
-<link href="https://embed.typeform.com/embed.js" rel="preload" as="script">
+<import src="/_base.html">
 
+  <fill name="title">Doll Finder</fill>
+  <fill name="page-css">
+    <link href="/dollfinder/dollfinder.css" rel="stylesheet">
+  </fill>
 
-<script>
-  document.addEventListener('touchmove', function () {
-    document.documentElement.classList.add('supportsMouse')
-  }, { once: true })
-  document.addEventListener('touchstart', function () {
-    document.documentElement.classList.add('supportsMouse')
-  }, { once: true })
-</script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-53931672-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-53931672-2');
-</script>
-</head>
-
-<body>
-
-  <div class="Page">
-    <h1><a class="Logo" href="../"><img src="../images/logo.png" alt="DodaDolls"></a></h1>
-    <div class="Separator"></div>
-
-        <div style="font-size: 1.2em; margin-bottom: 1em">Click on the picture below to browse the <strong>Best Limited Deals</strong> on collector dolls that I found for you!
-         </div>
+  <fill name="content">
+    <p style="font-size: 1.2em; margin-bottom: 1em">Click on the picture below to browse the <strong>Best Limited Deals</strong> on collector dolls that I found for you!
+         </p>
 
     <div>
-      <a href="https://www.alza.at/kod/HRAb1562;HRAb1567;HRAb1529;HRAbz06044;HRAbz06047;HRAb1527;HRAb1526;HRAb1523;HRAb1553;HRAb1497;HRAif11451;HRAif11454;HRAb1568;HRAif16195a;HRAb1565;HRAb1557;HRAb1556;HRAb1734?IDP=10244" target="_blank"><img src="../images/alzaMix2020.jpg" alt="Get the best Barbie deals here"></a>
+      <a href="https://www.alza.at/kod/HRAb1562;HRAb1567;HRAb1529;HRAbz06044;HRAbz06047;HRAb1527;HRAb1526;HRAb1523;HRAb1553;HRAb1497;HRAif11451;HRAif11454;HRAb1568;HRAif16195a;HRAb1565;HRAb1557;HRAb1556;HRAb1734?IDP=10244" target="_blank"><img src="/images/alzaMix2020.jpg" alt="Get the best Barbie deals here"></a>
 
     </div>
     <small>
@@ -72,17 +39,11 @@
       </div>
 
       <div class="ResponsiveContainer ResponsiveContainer--crop" style="padding-bottom: 55%">
-        <img src="../images/backgroundPic02.jpg" alt="DollFinder" role="presentation">
+        <img src="/images/backgroundPic02.jpg" alt="DollFinder" role="presentation">
       </div>
     </div>
 
-    <div class="Separator"></div>
-
-
-    <footer>© DodaDolls</footer>
-  </div>
-
-  <script>
+    <script>
     (function () {
       var selector = document.querySelector('.LangSelector')
       selector.querySelector('div').addEventListener('click', function (event) {
@@ -93,6 +54,5 @@
       }, { once: true })
     }())
   </script>
-</body>
-</html>
-
+  </fill>
+</import>

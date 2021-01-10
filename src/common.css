@@ -140,3 +140,24 @@ blockquote{
   padding-left: 1em;
   border-left: 5px solid #300bb5;
 }
+
+.Page-top {
+  display: flex; align-items: flex-end; justify-content: space-between;
+}
+
+.Page-top .bmc-btn {
+  margin-bottom: 30px;
+  margin-right: -1.5em;
+}
+
+.bmc-btn-container {
+  text-align: center;
+}
+
+.bmc-btn {
+  font-size: 18px !important;
+  height: auto !important;
+  min-width: 0 !important;
+  padding: 0.5em 1em !important;
+  border-radius: 1.5em !important;
+}
