@@ -28,12 +28,13 @@ body {
 .Menu a {
   color: rgba(0,0, 0,0.5);
   font-weight: bold;
-  padding: 1.2em 1em 1em;
+  padding: 1.2em 0.7em 1em;
   text-decoration: none;
   border-radius: 1.3em;
   white-space: nowrap
 }
 .Menu a:hover, .Menu a:focus {
+  color: #29907b;
   text-decoration: none;
   background-color: rgba(255,255,255,0.1)
 }
