@@ -28,10 +28,29 @@ body {
 .Menu a {
   color: rgba(0,0, 0,0.5);
   font-weight: bold;
-  padding: 1.2em 0.7em 1em;
+  padding: 0.6em 0.3em 0.5em;
   text-decoration: none;
   border-radius: 1.3em;
   white-space: nowrap
+}
+.Menu--list {
+  padding: 0;
+}
+.Menu--list a {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  white-space: normal;
+}
+@media (min-width: 500px) {
+  .Menu a {
+    padding: 1.2em 0.7em 1em;
+  }
+  .Menu--list a {
+    flex-direction: row;
+    padding: 1.2em 1em 1em
+  }
 }
 .Menu a:hover, .Menu a:focus {
   color: #29907b;
@@ -39,6 +58,7 @@ body {
   background-color: rgba(255,255,255,0.1)
 }
 .Menu span ~ a {
+  display: block;
   padding: 0 0.5em;
   opacity: 0.9
 }
@@ -51,6 +71,26 @@ body {
   height: 1.5em;
 }
 
+.Menu-thumbnail {
+  width: 4em !important;
+  padding-bottom: 4em !important;
+  border-radius: 3px;
+  margin-bottom: 1.3em;
+  background-color: hotpink;
+  background-size: cover;
+  background-position: center;
+}
+.Menu-thumbnail img {
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 500px) {
+  .Menu-thumbnail {
+    margin-bottom: 0;
+    margin-right: 1.3em;
+  }
+}
+
 @media (max-width: 890px) {
   .Menu {
     text-align: center
@@ -59,15 +99,21 @@ body {
   .Menu a {
     flex: 1;
   }
+
+  .Menu span ~ a { display: none; }
 }
 
 .Page {
   width: 100%;
-  padding: 0 2rem;
+  padding: 0 1rem;
   max-width: 968px;
   margin: 2em auto;
 }
-
+@media (min-width: 500px) {
+  .Page {
+    padding: 0 2rem;
+  }
+}
 h1 {
   font-weight: 300;
   margin-bottom: 0;
@@ -79,9 +125,11 @@ a:hover { text-decoration: underline; }
 .Logo {
   color: white;
   text-decoration: none;
-  margin-left: -4.3rem;
   display: block;
   height: 10rem
+}
+@media (min-width: 500px) {
+  .Logo { margin-left: -4.3rem; }
 }
 
 h1 + p { margin-top: 0; }
@@ -142,12 +190,18 @@ blockquote{
   border-left: 5px solid #300bb5;
 }
 
-.Page-top {
-  display: flex; align-items: flex-end; justify-content: space-between;
-}
+.Page-top { text-align: center; }
+.Page-top .bmc-btn { display: none !important; }
 
-.Page-top .bmc-btn {
-  margin-right: -1.5em;
+@media (min-width: 500px) {
+  .Page-top {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    text-align: initial;
+  }
+  .Page-top .bmc-btn {
+    margin-right: -1.5em;
+    display: inline-flex !important;
+  }
 }
 
 .bmc-btn-container {
@@ -190,3 +244,6 @@ html { height: auto !important; min-height: 100%; }
   font-size: 1em !important;
   font-weight: normal !important;
 }
+
+.BlogRoll .Menu { font-size: 1.2em; }
+.BlogRoll .Menu a { color: #1435b9; font-weight: normal; }
