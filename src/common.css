@@ -216,6 +216,10 @@ blockquote{
   border-radius: 1.5em !important;
 }
 
+.bmc-btn-text {
+  flex-shrink: initial !important
+}
+
 .PictureRow p {
   display: flex
 }
