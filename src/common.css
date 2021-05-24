@@ -13,6 +13,20 @@ body {
   color: white;
   margin: 0;
 }
+.Boxbutton {
+  border: 2px solid;
+  border-radius: 2.5px;
+  padding: 16px;
+  box-shadow: 2px 2px 0 #72720d;
+}
+.Boxbutton:active {
+  transform: translateY(2.5px);
+  box-shadow: none;
+}
+.Boxbutton a:hover {
+  text-decoration: none;
+}
+
 .Menu {
   display: flex;
   align-items: center;
