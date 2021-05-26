@@ -1,11 +1,24 @@
 article {
   font-family: 'Baloo Tamma 2', cursive;
   /*background-color: rgba(255,255,255,0.1);*/
-  padding: 1em;
+  padding: 1em 2em;
   border-radius: 1.5em;
-  margin: 0 auto;
+  margin: 2em auto;
   width: 100%;
   max-width: 678px;
+}
+
+.Menu,
+article {
+  background-color: rgba(255, 255, 255, 0.3)
+}
+
+@media (max-width: 500px) {
+  article {
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+    width: auto;
+  }
 }
 
 article,

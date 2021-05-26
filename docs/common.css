@@ -264,4 +264,4 @@ html { height: auto !important; min-height: 100%; }
 }
 
 .BlogRoll .Menu { font-size: 1.2em; }
-.BlogRoll .Menu a { color: #1435b9; font-weight: normal; }
+.BlogRoll .Menu a { color: rgba(0,0,0,0.8); font-weight: normal; }
