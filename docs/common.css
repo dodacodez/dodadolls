@@ -265,3 +265,14 @@ html { height: auto !important; min-height: 100%; }
 
 .BlogRoll .Menu { font-size: 1.2em; }
 .BlogRoll .Menu a { color: rgba(0,0,0,0.8); font-weight: normal; }
+
+.Shadow {
+  box-shadow: 10px 10px 30px hsl(135deg 40% 20%);
+  animation: ShadowColor 5s linear infinite alternate;
+}
+
+@keyframes ShadowColor {
+  0% { box-shadow: 10px 10px 30px hsl(251deg 87% 45%);  }
+  50% { box-shadow: 10px 10px 30px hsl(315deg 87% 45%); }
+  100% { box-shadow: 10px 10px 30px hsl(196deg 86% 40%); }
+}
