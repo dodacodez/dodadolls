@@ -38,3 +38,5 @@ h1 span span {
     background-color: white;
   }
 }
+
+.content a:hover { filter: invert(1) }
