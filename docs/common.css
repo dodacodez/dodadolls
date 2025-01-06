@@ -276,3 +276,7 @@ html { height: auto !important; min-height: 100%; }
   50% { box-shadow: 10px 10px 30px hsl(315deg 87% 45%); }
   100% { box-shadow: 10px 10px 30px hsl(196deg 86% 40%); }
 }
+
+.js-clipboard {
+  cursor: pointer;
+}

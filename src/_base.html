@@ -30,7 +30,6 @@
     />
 
     <link href="/common.css" rel="stylesheet" />
-    <slot name="page-css"></slot>
 
     <link rel="icon" type="image/jpeg" href="/images/favicon.jpg" />
     <script>
@@ -168,7 +167,7 @@
           href="https://instagram.com/dodadolls"
           target="_blank"
           style="filter: hue-rotate(210deg) contrast(1.5)"
-          ><img src="https://instagram.com/favicon.ico" alt="instagram"
+          ><img src="https://static.cdninstagram.com/rsrc.php/v4/yR/r/lam-fZmwmvn.png" alt="instagram"
         /></a>
         <a
           href="https://www.youtube.com/channel/UCUndYFrjA-aPib85w3DKBzg"
@@ -229,6 +228,23 @@
         js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
         fjs.parentNode.insertBefore(js, fjs);
       })(document, "script", "facebook-jssdk");
+
+      // copy clipboard //
+
+      document.addEventListener("click", async event => {
+        const target = event.target.closest(".js-clipboard")
+        if (target) {
+          try {
+            event.preventDefault()
+            const text = target.href ? target.href : target.textContent
+            const successMessage = (target.href ? "Link" : "Text") + " copied to clipboard"
+            await navigator.clipboard.writeText(text);
+            alert(successMessage);
+          } catch (err) {
+            alert('Failed to copy');
+          }
+        }
+      })
     </script>
   </body>
 </html>

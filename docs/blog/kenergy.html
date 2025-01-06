@@ -1,3 +1,5 @@
+<link href="./blog.css" rel="stylesheet">
+
 <!DOCTYPE html>
 <html class="supportsMouse">
   <head>
@@ -32,7 +34,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet">
 
     <link href="/common.css" rel="stylesheet">
-    
 
     <link rel="icon" type="image/jpeg" href="/images/favicon.jpg">
     <script>
@@ -140,7 +141,7 @@
         <a href="https://www.ebay.de/usr/dodadolls" target="_blank">eBay</a>
         <span style="flex: 1"></span>
         <a href="https://facebook.com/dodadolls" target="_blank" style="filter: hue-rotate(240deg) contrast(2)"><img src="https://facebook.com/favicon.ico" alt="facebook"></a>
-        <a href="https://instagram.com/dodadolls" target="_blank" style="filter: hue-rotate(210deg) contrast(1.5)"><img src="https://instagram.com/favicon.ico" alt="instagram"></a>
+        <a href="https://instagram.com/dodadolls" target="_blank" style="filter: hue-rotate(210deg) contrast(1.5)"><img src="https://static.cdninstagram.com/rsrc.php/v4/yR/r/lam-fZmwmvn.png" alt="instagram"></a>
         <a href="https://www.youtube.com/channel/UCUndYFrjA-aPib85w3DKBzg" target="_blank" style="filter: hue-rotate(185deg) contrast(1.5)"><img src="https://youtube.com/favicon.ico" alt="YouTube"></a>
       </nav>
 
@@ -236,6 +237,23 @@
         js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
         fjs.parentNode.insertBefore(js, fjs);
       })(document, "script", "facebook-jssdk");
+
+      // copy clipboard //
+
+      document.addEventListener("click", async event => {
+        const target = event.target.closest(".js-clipboard")
+        if (target) {
+          try {
+            event.preventDefault()
+            const text = target.href ? target.href : target.textContent
+            const successMessage = (target.href ? "Link" : "Text") + " copied to clipboard"
+            await navigator.clipboard.writeText(text);
+            alert(successMessage);
+          } catch (err) {
+            alert('Failed to copy');
+          }
+        }
+      })
     </script>
   </body>
 </html>

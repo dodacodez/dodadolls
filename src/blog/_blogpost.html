@@ -1,3 +1,5 @@
+<link href="./blog.css" rel="stylesheet" />
+
 <import src="/_base.html">
   <fill name="seo">
     <slot name="seo">
@@ -209,6 +211,27 @@
             }
           });
       })();
+
+// copy clipboard //
+
+  document.addEventListener("click", async event => {
+    const target = event.target.closest(".js-clipboard")
+    console.log(target, event.target)
+      event.preventDefault()
+    if (target) {
+      try {
+        console.log(target.href)
+        const text = target.href ? target.href : target.textContent
+        const successMessage = (target.href ? "Link" : "Text") + " copied to clipboard"
+        await navigator.clipboard.writeText(text);
+        alert(successMessage);
+      } catch (err) {
+        alert('Failed to copy');
+      }
+    }
+
+  } )
+
     </script>
   </fill>
 </import>

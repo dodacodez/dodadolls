@@ -55,3 +55,8 @@ summary > * {
 
 article h3 {
 }
+
+.content a {
+  font-style: italic;
+  color: #23624e;
+}
