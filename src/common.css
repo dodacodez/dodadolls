@@ -323,7 +323,7 @@ html {
 
 :root {
   /* Adjust if your theme already defines these */
-  --cta-bg: var(--primary-color, #ff5fa2);
+  --cta-bg: var(--primary-color, #5f7fff);
   --cta-bg-hover: var(--secondary-color, #ff3c8f);
   --cta-text: var(--text-on-primary, #ffffff);
   --cta-shadow: rgba(0, 0, 0, 0.15);
@@ -335,7 +335,8 @@ html {
   border-radius: 999px;
   padding: 0.9em 1.6em;
   background: var(--cta-bg);
-  color: var(--cta-text);
+  color: var(--cta-text) !important;
+  text-decoration: none !important;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.02em;
