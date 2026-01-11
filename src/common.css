@@ -4,7 +4,13 @@
 
 body {
   font-size: 16px;
-  font-family: apercu-pro, -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  font-family:
+    apercu-pro,
+    -apple-system,
+    system-ui,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    sans-serif;
   background-color: #8bae00;
   background-image: linear-gradient(to right top, #04d4f6, #8bae00);
   background-repeat: no-repeat;
@@ -32,20 +38,20 @@ body {
   align-items: center;
   flex-wrap: wrap;
   padding: 0 1em;
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 1.5em;
   margin: 0 -1.5em;
-  font-family: 'Baloo Tamma 2', cursive;
+  font-family: "Baloo Tamma 2", cursive;
   font-size: 18px;
-  line-height: 1
+  line-height: 1;
 }
 .Menu a {
-  color: rgba(0,0, 0,0.5);
+  color: rgba(0, 0, 0, 0.5);
   font-weight: bold;
   padding: 0.6em 0.3em 0.5em;
   text-decoration: none;
   border-radius: 1.3em;
-  white-space: nowrap
+  white-space: nowrap;
 }
 .Menu--list {
   padding: 0;
@@ -63,18 +69,19 @@ body {
   }
   .Menu--list a {
     flex-direction: row;
-    padding: 1.2em 1em 1em
+    padding: 1.2em 1em 1em;
   }
 }
-.Menu a:hover, .Menu a:focus {
+.Menu a:hover,
+.Menu a:focus {
   color: #29907b;
   text-decoration: none;
-  background-color: rgba(255,255,255,0.1)
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .Menu span ~ a {
   display: block;
   padding: 0 0.5em;
-  opacity: 0.9
+  opacity: 0.9;
 }
 .Menu span ~ a:hover,
 .Menu span ~ a:focus {
@@ -107,14 +114,16 @@ body {
 
 @media (max-width: 890px) {
   .Menu {
-    text-align: center
+    text-align: center;
   }
 
   .Menu a {
     flex: 1;
   }
 
-  .Menu span ~ a { display: none; }
+  .Menu span ~ a {
+    display: none;
+  }
 }
 
 .Page {
@@ -133,20 +142,28 @@ h1 {
   margin-bottom: 0;
 }
 
-a { text-decoration: none }
-a:hover { text-decoration: underline; }
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 
 .Logo {
   color: white;
   text-decoration: none;
   display: block;
-  height: 10rem
+  height: 10rem;
 }
 @media (min-width: 500px) {
-  .Logo { margin-left: -4.3rem; }
+  .Logo {
+    margin-left: -4.3rem;
+  }
 }
 
-h1 + p { margin-top: 0; }
+h1 + p {
+  margin-top: 0;
+}
 
 img {
   vertical-align: middle;
@@ -171,7 +188,10 @@ img {
 
 .ResponsiveContainer > :first-child {
   position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .ResponsiveContainer--crop {
@@ -195,7 +215,7 @@ img {
   white-space: nowrap;
 }
 
-blockquote{
+blockquote {
   font-size: 1.1em;
   font-weight: 400;
   color: #300bb5;
@@ -204,12 +224,18 @@ blockquote{
   border-left: 5px solid #300bb5;
 }
 
-.Page-top { text-align: center; }
-.Page-top .bmc-btn { display: none !important; }
+.Page-top {
+  text-align: center;
+}
+.Page-top .bmc-btn {
+  display: none !important;
+}
 
 @media (min-width: 500px) {
   .Page-top {
-    display: flex; align-items: flex-end; justify-content: space-between;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
     text-align: initial;
   }
   .Page-top .bmc-btn {
@@ -231,11 +257,11 @@ blockquote{
 }
 
 .bmc-btn-text {
-  flex-shrink: initial !important
+  flex-shrink: initial !important;
 }
 
 .PictureRow p {
-  display: flex
+  display: flex;
 }
 
 .PictureRow img {
@@ -247,14 +273,17 @@ blockquote{
   text-align: right;
 }
 
-html { height: auto !important; min-height: 100%; }
+html {
+  height: auto !important;
+  min-height: 100%;
+}
 
 .translate select {
   font-size: 1.2em;
   border-radius: 0.5em;
-  background-color: rgba(255,255,255,0.1);
-  border: 1px solid rgba(0,0,0,0.1);
-  color: rgba(0,0,0,0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.5);
   padding: 0.25em;
 }
 
@@ -263,8 +292,13 @@ html { height: auto !important; min-height: 100%; }
   font-weight: normal !important;
 }
 
-.BlogRoll .Menu { font-size: 1.2em; }
-.BlogRoll .Menu a { color: rgba(0,0,0,0.8); font-weight: normal; }
+.BlogRoll .Menu {
+  font-size: 1.2em;
+}
+.BlogRoll .Menu a {
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: normal;
+}
 
 .Shadow {
   box-shadow: 10px 10px 30px hsl(135deg 40% 20%);
@@ -272,11 +306,54 @@ html { height: auto !important; min-height: 100%; }
 }
 
 @keyframes ShadowColor {
-  0% { box-shadow: 10px 10px 30px hsl(251deg 87% 45%);  }
-  50% { box-shadow: 10px 10px 30px hsl(315deg 87% 45%); }
-  100% { box-shadow: 10px 10px 30px hsl(196deg 86% 40%); }
+  0% {
+    box-shadow: 10px 10px 30px hsl(251deg 87% 45%);
+  }
+  50% {
+    box-shadow: 10px 10px 30px hsl(315deg 87% 45%);
+  }
+  100% {
+    box-shadow: 10px 10px 30px hsl(196deg 86% 40%);
+  }
 }
 
 .js-clipboard {
   cursor: pointer;
+}
+
+:root {
+  /* Adjust if your theme already defines these */
+  --cta-bg: var(--primary-color, #ff5fa2);
+  --cta-bg-hover: var(--secondary-color, #ff3c8f);
+  --cta-text: var(--text-on-primary, #ffffff);
+  --cta-shadow: rgba(0, 0, 0, 0.15);
+}
+
+.cta-newsletter {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.9em 1.6em;
+  background: var(--cta-bg);
+  color: var(--cta-text);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  box-shadow: 0 8px 20px var(--cta-shadow);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.cta-newsletter:hover {
+  background: var(--cta-bg-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px var(--cta-shadow);
+}
+
+.cta-newsletter:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 16px var(--cta-shadow);
 }
