@@ -189,19 +189,27 @@
       .Carousel {
         position: relative;
         overflow: hidden;
-        padding: 1.5rem 2rem;
-        background: rgba(255, 255, 255, 0.15);
+        padding: 2rem 2.5rem;
+        background: rgba(255, 255, 255, 0.25);
         border-radius: 16px;
       }
       .Carousel-track {
         display: flex;
+        align-items: center;
         transition: transform 0.4s ease;
       }
       .Carousel-slide {
+        width: 100%;
         min-width: 100%;
-        padding: 0 1rem;
+        flex-shrink: 0;
+        padding: 0 2rem;
         box-sizing: border-box;
         font-family: 'Baloo Tamma 2', cursive;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
       }
       .Carousel-stars {
         color: #FFD700;
@@ -209,14 +217,15 @@
         margin-bottom: 0.8rem;
       }
       .Carousel-quote {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         font-style: italic;
-        line-height: 1.5;
-        margin-bottom: 0.8rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
       }
       .Carousel-author {
+        font-size: 1.1rem;
         font-weight: bold;
-        opacity: 0.85;
       }
       .Carousel-nav {
         display: flex;
@@ -227,11 +236,15 @@
       .Carousel-dot {
         width: 10px;
         height: 10px;
+        min-width: 10px;
+        min-height: 10px;
+        padding: 0;
         border-radius: 50%;
         background: rgba(255, 255, 255, 0.4);
         border: none;
         cursor: pointer;
         transition: background 0.2s ease;
+        flex-shrink: 0;
       }
       .Carousel-dot.active,
       .Carousel-dot:hover {
@@ -338,15 +351,20 @@
       <div class="Reviews-grid">
         <div class="Review-item">
           <img src="/images/review1.jpeg" alt="Happy buyer with doll">
+          <p class="Review-author">- Sabrina</p>
         </div>
         <div class="Review-item">
           <img src="/images/review2.jpeg" alt="Happy buyer with doll">
+          <p class="Review-author">- Eftychia</p>
         </div>
         <div class="Review-item">
           <img src="/images/review4.jpg" alt="Happy buyer with doll">
+          <p class="Review-author">- Janine</p>
+          <p style="italic">"Today she arrived. Thank you, DodaDolls! I will soon unpack her."</p>
         </div>
         <div class="Review-item">
           <img src="/images/review3.jpg" alt="Happy buyer with doll">
+          <p class="Review-author">- Katarzyna</p>
         </div>
       </div>
     </section>
