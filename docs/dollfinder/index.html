@@ -18,6 +18,135 @@
     <link href="/common.css" rel="stylesheet">
     
     <link href="/dollfinder/dollfinder.css" rel="stylesheet">
+    <style>
+      .Dollfinder-hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 2.5rem;
+        margin-bottom: 2rem;
+      }
+      .Dollfinder-hero-image {
+        flex-shrink: 0;
+      }
+      .Dollfinder-hero-image img {
+        border-radius: 16px;
+        max-width: 300px;
+        width: 100%;
+        height: auto;
+      }
+      .Dollfinder-hero-content {
+        font-family: 'Baloo Tamma 2', cursive;
+      }
+      .Dollfinder-hero-headline {
+        font-family: apercu-pro, -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 0 0 0.5rem;
+        line-height: 1.1;
+      }
+      .Dollfinder-hero-subheader {
+        font-size: 1.3rem;
+        margin: 0 0 1rem;
+        opacity: 0.85;
+      }
+      .Dollfinder-hero-body {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+      }
+      @media (min-width: 600px) {
+        .Dollfinder-hero {
+          flex-direction: row;
+          align-items: center;
+          text-align: left;
+        }
+        .Dollfinder-hero-image img {
+          max-width: 350px;
+        }
+      }
+      .Amazon-section {
+        margin: 2rem 0;
+      }
+      .Amazon-section h3 {
+        font-family: 'Baloo Tamma 2', cursive;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+      .Amazon-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+      .Amazon-links a {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        padding: 0.6em 1.2em;
+        border-radius: 999px;
+        text-decoration: none;
+        font-family: 'Baloo Tamma 2', cursive;
+        transition: background 0.2s ease, transform 0.2s ease;
+      }
+      .Amazon-links a:hover {
+        background: rgba(255, 255, 255, 0.35);
+        transform: translateY(-2px);
+        text-decoration: none;
+      }
+      .Links-row {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin: 1.5rem 0;
+      }
+      @media (min-width: 600px) {
+        .Links-row {
+          flex-direction: row;
+          justify-content: center;
+          gap: 3rem;
+        }
+      }
+      .Links-row-item {
+        text-align: center;
+        font-family: 'Baloo Tamma 2', cursive;
+      }
+      .Links-row-item--primary {
+        max-width: 500px;
+      }
+      .Links-row-item--secondary {
+        max-width: 300px;
+      }
+      .Links-row-item h3 {
+        font-family: apercu-pro, -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin: 0 0 0.8rem;
+      }
+      .Links-row-item a {
+        display: block;
+      }
+      .Links-row-item img {
+        width: 100%;
+        border-radius: 8px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .Links-row-item--secondary img {
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+      .Links-row-item a:hover img {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      }
+      .Links-row-item p {
+        font-size: 1.1rem;
+        margin: 0.8rem 0 0;
+        line-height: 1.5;
+      }
+    </style>
   
 
     <link rel="icon" type="image/jpeg" href="/images/favicon.jpg">
@@ -108,7 +237,21 @@
           <a class="Logo" href="/"><img src="/images/logo.png" alt="DodaDolls"></a>
         </h1>
         <div>
-          <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="dodadolls" data-color="#5F7FFF" data-emoji="🎀 " data-font="Lato" data-text="Buy a tea for my dolls" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00"></script>
+          <!-- Buy me a coffee button - commented out for now
+          <script
+            type="text/javascript"
+            src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
+            data-name="bmc-button"
+            data-slug="dodadolls"
+            data-color="#5F7FFF"
+            data-emoji="🎀 "
+            data-font="Lato"
+            data-text="Buy a tea for my dolls"
+            data-outline-color="#000000"
+            data-font-color="#ffffff"
+            data-coffee-color="#FFDD00"
+          ></script>
+          -->
           <div style="display: flex; justify-content: flex-end">
             <div aria-hidden="true" style="font-size: 1.2em; padding-top: 0.25em; margin-right: 0.2em">
               🇬🇧
@@ -138,55 +281,54 @@
       <div id="fb-customer-chat" class="fb-customerchat"></div>
 
       <div class="content">
-    <div style="text-align: center; margin-top: 20px; margin-bottom: 16px">
-        <p>
-        <img src="https://media.giphy.com/media/wogOpXFZDSjBbMOgQb/giphy.gif" width="400" height="400" frameBorder="0">
-      </p>
-
-    <a href="https://littleshopofpins.com/collections/barbie" target="blank"><img src="/images/lilpins.gif" width="650" height="400" frameBorder="0"></a>
-    <p>
-      Look at those gorgeous NEW BARBIE PINS! Click on the picture above to get to the shop. 
-    </p>
-      
-
-    <div>
-     
-      <p>
-        <img src="https://media1.giphy.com/media/jATep67ASr7tp4logX/giphy.gif" width="400" height="200" frameBorder="0"></p>
-        
-
-      <p>
-
-    </p></div>
+    <section class="Dollfinder-hero">
+      <div class="Dollfinder-hero-image">
+        <img src="https://media.giphy.com/media/wogOpXFZDSjBbMOgQb/giphy.gif" alt="Doll finder animation" width="400" height="400">
+      </div>
+      <div class="Dollfinder-hero-content">
+        <h2 class="Dollfinder-hero-headline">dollfinder</h2>
+        <p class="Dollfinder-hero-subheader">help me find your dream doll</p>
+        <p class="Dollfinder-hero-body">
+          between antique store hunts and doll meetups, I come across all kinds of gems. if you're searching for something specific, reach out - my doll network might just have what you need. below are some places to start your hunt:
+        </p>
+      </div>
+    </section>
 
     <div class="Separator"></div>
 
-      <div style="font-size: 1.4em;">
-        <p>
-         View my current sales ads with pricing in EUR here:
-         </p><p>
-          <a href="https://www.willhaben.at/iad/kaufen-und-verkaufen/verkaeuferprofil/23749061"><img src="/images/dollcircle_logo.jpg" alt="DollFinder" role="presentation" style="max-width: 50%"></a></p>
-
+    <div class="Links-row">
+      <div class="Links-row-item Links-row-item--primary">
+        <h3>Join my FB group</h3>
+        <a href="https://www.facebook.com/groups/barbiedeals" target="_blank">
+          <img src="/images/FBgroupCover1.jpg" alt="Facebook group">
+        </a>
+        <p>Join my private FB group with current NRFB doll deals from a private collection!</p>
+      </div>
+      <div class="Links-row-item Links-row-item--secondary">
+        <h3>Sales in EUR</h3>
+        <a href="https://www.willhaben.at/iad/kaufen-und-verkaufen/verkaeuferprofil/23749061" target="_blank">
+          <img src="/images/dollcircle_logo.jpg" alt="Willhaben sales">
+        </a>
+        <p>View my current sales ads with pricing in EUR here.</p>
+      </div>
     </div>
 
-        <div style="color: #F9FFFE; font-size: 1.4em; font-family: 'Baloo Tamma 2'">
-        <p>
-          <center> Be part of my private FB group with current NRFB doll deals from a private collection!
-        <br>Click on the picture to join:</center></p>
-        </div>
-        <center>
-        <a href="https://www.facebook.com/groups/barbiedeals" target="_blank">
-        <img src="/images/FBgroupCover1.jpg" alt="DollGroup"></a></center>
-        <div class="Separator"></div>
-        <p>
+    <p style="text-align: center;"><small>My deals are currently only available with shipment to EU countries.</small></p>
 
-    <small>
-      Some selected deals are only available with shipment to EU countries.
-      </small></p>
+    <div class="Separator"></div>
 
-
-
-
+        <section class="Amazon-section">
+          <h3>New Barbie Arrivals</h3>
+          <div class="Amazon-links">
+            <a href="https://amzn.to/4qKEcIS" target="_blank">Ballet Wishes Doll</a>
+            <a href="https://amzn.to/4rpGJZ1" target="_blank">Debbie Allen Tribute</a>
+            <a href="https://amzn.to/4ta4UMJ" target="_blank">Dia De Muertos</a>
+            <a href="https://amzn.to/4a6sq4i" target="_blank">Lunar New Year</a>
+            <a href="https://amzn.to/4a35F1d" target="_blank">Basics You Create Kit</a>
+          </div>
+        </section>
+      <p style="text-align: center; font-style: italic" ;=""><small>
+      These are affiliate links. If you make a purchase through these links, I may receive a small commission at no extra cost to you. It helps me run this site, thank you!</small></p>
 
     <script>
     (function () {
@@ -199,7 +341,7 @@
       }, { once: true })
     }())
   </script>
-  </div></div>
+  </div>
 
       
 
