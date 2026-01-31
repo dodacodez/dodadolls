@@ -3,31 +3,92 @@
   <fill name="title">Home</fill>
   <fill name="page-css">
     <link href="./gallerylinks.css" rel="stylesheet">
+    <style>
+      .Hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 2.5rem;
+        margin-bottom: 2rem;
+      }
+      .Hero-image {
+        flex-shrink: 0;
+      }
+      .Hero-image img {
+        border-radius: 16px;
+        max-width: 300px;
+        width: 100%;
+        height: auto;
+      }
+      .Hero-content {
+        font-family: 'Baloo Tamma 2', cursive;
+      }
+      .Hero-headline {
+        font-family: apercu-pro, -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 0 0 0.5rem;
+        line-height: 1.1;
+      }
+      .Hero-subheader {
+        font-size: 1.3rem;
+        margin: 0 0 1rem;
+        opacity: 0.85;
+      }
+      .Hero-body {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+      }
+      .Hero-body a {
+        color: inherit;
+        text-decoration: none;
+        font-style: italic;
+      }
+      .Hero-body a:hover {
+        font-style: normal;
+        font-weight: bold;
+      }
+      .Hero .cta-newsletter {
+        font-family: apercu-pro, -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+      }
+      @media (min-width: 600px) {
+        .Hero {
+          flex-direction: row;
+          align-items: center;
+          text-align: left;
+        }
+        .Hero-image img {
+          max-width: 350px;
+        }
+      }
+    </style>
   </fill>
 
 
   <fill name="content">
 
-  <div style="font-family: 'Baloo Tamma 2'; font-size: 1.4rem; text-align: center; width: 100%; max-width: 50%; margin: 1em auto">
-   
-    <img src="https://media.giphy.com/media/lYhfgXvCfdaG2Qpy75/giphy.gif" style="border-radius: 16px" class="Shadow" width="400" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-    
-     <p>
-    CHECK OUT MY <a href="/blog">BLOG</a> AND <a href="/dollfinder">DEAL SECTION</a> FOR THE NEWEST BARBIE GOSSIP AND RELEASES!</p>
-  </div>
-
-    <p>My name is Doda and I am a passionate and avid Barbie collector. I built this site to grow a heavenly doll place for me and other Barbie fanatics. At DodaDolls you can find pictures of my collection, one of a kind doll creations, hybrids, rarities, as well as diorama/DIY inspirations and doll art.</p>
-
-    <p style="font-family: 'Baloo Tamma 2'"><blockquote>
-    When I was 8 years old I fell in love with Mattel's Jewel Secrets Whitney and made a silent promise to myself: <br>"When I grow up, I shall get all the Barbies I always dreamed of." </blockquote>
-  Over 20 years later I can look at a small but solid collection of boxed and unboxed Steffie mold dolls, Superstar Barbies and modern Fashionistas. It gives me enormous joy to photograph and pose my hybrid dolls or create rooms for their doll events. You can find my deboxing videos on YouTube. Let me invite you on a colourful trip into the unique world of DodaDolls!</p>
-
-      <p><small>
-        please note: pictures + content is © DodaDolls. reproduction, sharing or altering without written consent is prohibited.</small>
+  <section class="Hero">
+    <div class="Hero-image">
+      <img src="https://media.giphy.com/media/lYhfgXvCfdaG2Qpy75/giphy.gif" alt="Barbie doll animation" width="400" height="400">
+    </div>
+    <div class="Hero-content">
+      <h2 class="Hero-headline">welcome to my doll brain</h2>
+      <p class="Hero-subheader">dolls. thoughts. mild obsession.</p>
+      <p class="Hero-body">
+        I write about doll collecting, document my collection on <a href="https://www.youtube.com/channel/UCUndYFrjA-aPib85w3DKBzg/featured" target="_blank">YouTube</a>, create OOAKs when the mood hits, and sell NRFB + collector dolls along the way.<br><br>
+        View this page like a scrapbook, since it is far from a showroom.
       </p>
-    </p>
+      <a href="/blog" class="cta-newsletter">Enter the Chaos</a>
+    </div>
+  </section>
 
-    <div class="Separator"></div>
+  <p><small>
+    please note: pictures + content is © DodaDolls. reproduction, sharing or altering without written consent is prohibited.</small>
+  </p>
+
+  <div class="Separator"></div>
 
 <nav class="MainCta">
   <a class="ResponsiveContainer" href="./aboutdoda.html">
@@ -56,20 +117,11 @@
     YouTube" role="presentation" style="top: 60%; transform: translateY(-50%);">
     <span>YouTube</span>
   </a>
-  <a class="ResponsiveContainer" href="https://www.ebay.com/usr/dodadolls" target="_blank">
-    <img src="./images/DayaKiraRainbow.jpg" alt="
-    eBay" role="presentation">
-    <span>eBay</span>
-  </a>
-  <a class="ResponsiveContainer" href="https://www.etsy.com/shop/glittergifgirlfriend" target="_blank">
-    <img src="./images/etsypic.jpg" alt="
-    Etsy" role="presentation">
-    <span>Etsy</span>
-  </a>
   <a class="ResponsiveContainer ResponsiveContainer--crop" href="https://facebook.com/dodadolls" target="_blank">
     <img src="./images/billyjean.jpg" alt="Facebook" role="presentation">
     <span>Facebook</span>
   </a>
+  <div class="ResponsiveContainer" aria-hidden="true" style="visibility: hidden"></div>
   <div class="ResponsiveContainer ResponsiveContainer--crop" aria-hidden="true">
     <img src="./images/logo.png" alt="DodaDolls" style="top: 50%; transform: translateY(-50%)">
   </div>
