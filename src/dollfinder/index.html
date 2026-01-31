@@ -193,8 +193,7 @@
         text-align: center;
       }
       .Carousel {
-        position: relative;
-        overflow: hidden;
+        position: relative;        
         padding: 2rem 2.5rem;
         background: rgba(255, 255, 255, 0.25);
         border-radius: 16px;
@@ -278,6 +277,12 @@
         cursor: pointer;
         pointer-events: auto;
         transition: background 0.2s ease;
+      }
+      .Carousel-arrow:first-child {
+        transform: translateX(-50%);
+      }
+      .Carousel-arrow:last-child {
+        transform: translateX(50%);
       }
       .Carousel-arrow:hover {
         background: rgba(255, 255, 255, 0.5);
@@ -380,26 +385,28 @@
 
     <section class="Carousel-section">
       <div class="Carousel">
-        <div class="Carousel-track" id="carouselTrack">
-          <div class="Carousel-slide">
-            <div class="Carousel-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="Carousel-quote">"Bought a doll from DodaDolls and I give her high recommendations. Well packed and good communication. Thank you, DodaDolls!"</p>
-            <p class="Carousel-author">- Katarina S.</p>
-          </div>
-          <div class="Carousel-slide">
-            <div class="Carousel-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="Carousel-quote">"Fantastic!"</p>
-            <p class="Carousel-author">- Peggy H.</p>
-          </div>
-          <div class="Carousel-slide">
-            <div class="Carousel-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="Carousel-quote">"Definitely recommend. Great dolls in wonderful condition, quick shipping and very nice seller. Understanding and cooperative and responds quickly."</p>
-            <p class="Carousel-author">- Gabriela P.</p>
-          </div>
-          <div class="Carousel-slide">
-            <div class="Carousel-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p class="Carousel-quote">"Again a 100% perfect service for the Barbie's. Great service, nice seller. Always correct. Perfect boxes and items always as described."</p>
-            <p class="Carousel-author">- Jens G.</p>
+        <div style="overflow: hidden">
+          <div class="Carousel-track" id="carouselTrack">
+            <div class="Carousel-slide">
+              <div class="Carousel-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="Carousel-quote">"Bought a doll from DodaDolls and I give her high recommendations. Well packed and good communication. Thank you, DodaDolls!"</p>
+              <p class="Carousel-author">- Katarina S.</p>
+            </div>
+            <div class="Carousel-slide">
+              <div class="Carousel-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="Carousel-quote">"Fantastic!"</p>
+              <p class="Carousel-author">- Peggy H.</p>
+            </div>
+            <div class="Carousel-slide">
+              <div class="Carousel-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="Carousel-quote">"Definitely recommend. Great dolls in wonderful condition, quick shipping and very nice seller. Understanding and cooperative and responds quickly."</p>
+              <p class="Carousel-author">- Gabriela P.</p>
+            </div>
+            <div class="Carousel-slide">
+              <div class="Carousel-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <p class="Carousel-quote">"Again a 100% perfect service for the Barbie's. Great service, nice seller. Always correct. Perfect boxes and items always as described."</p>
+              <p class="Carousel-author">- Jens G.</p>
+            </div>
           </div>
         </div>
         <div class="Carousel-arrows">
