@@ -1,0 +1,9 @@
+# DodaDolls robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://dodadolls.com/sitemap.xml
+
+# Disallow non-content pages
+Disallow: /success.html
