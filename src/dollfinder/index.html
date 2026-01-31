@@ -126,6 +126,142 @@
         transform: translateY(-2px);
         text-decoration: none;
       }
+      .Reviews-section {
+        margin: 2rem 0;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 16px;
+      }
+      .Reviews-section h3 {
+        font-family: apercu-pro, -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin: 0 0 1.5rem;
+        text-align: center;
+      }
+      .Reviews-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      @media (min-width: 600px) {
+        .Reviews-grid {
+          flex-direction: row;
+          justify-content: center;
+        }
+      }
+      .Review-item {
+        flex: 1 1 calc(50% - 1rem);
+        max-width: 200px;
+        text-align: center;
+        font-family: 'Baloo Tamma 2', cursive;
+      }
+      @media (min-width: 600px) {
+        .Reviews-grid {
+          flex-wrap: wrap;
+        }
+        .Review-item {
+          flex: 1 1 auto;
+          max-width: 180px;
+        }
+      }
+      .Review-item img {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+      .Review-item p {
+        font-size: 1rem;
+        font-style: italic;
+        line-height: 1.4;
+        margin: 0;
+      }
+      .Review-item .Review-author {
+        font-style: normal;
+        font-weight: bold;
+        margin-top: 0.5rem;
+        opacity: 0.85;
+      }
+      .Carousel-section {
+        margin: 2rem 0;
+        text-align: center;
+      }
+      .Carousel {
+        position: relative;
+        overflow: hidden;
+        padding: 1.5rem 2rem;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 16px;
+      }
+      .Carousel-track {
+        display: flex;
+        transition: transform 0.4s ease;
+      }
+      .Carousel-slide {
+        min-width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+        font-family: 'Baloo Tamma 2', cursive;
+      }
+      .Carousel-stars {
+        color: #FFD700;
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+      }
+      .Carousel-quote {
+        font-size: 1.1rem;
+        font-style: italic;
+        line-height: 1.5;
+        margin-bottom: 0.8rem;
+      }
+      .Carousel-author {
+        font-weight: bold;
+        opacity: 0.85;
+      }
+      .Carousel-nav {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+      .Carousel-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.4);
+        border: none;
+        cursor: pointer;
+        transition: background 0.2s ease;
+      }
+      .Carousel-dot.active,
+      .Carousel-dot:hover {
+        background: rgba(255, 255, 255, 0.9);
+      }
+      .Carousel-arrows {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        pointer-events: none;
+      }
+      .Carousel-arrow {
+        background: rgba(255, 255, 255, 0.3);
+        border: none;
+        color: white;
+        font-size: 1.2rem;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        cursor: pointer;
+        pointer-events: auto;
+        transition: background 0.2s ease;
+      }
+      .Carousel-arrow:hover {
+        background: rgba(255, 255, 255, 0.5);
+      }
       .Links-row {
         display: flex;
         flex-direction: column;
@@ -197,6 +333,95 @@
 
     <div class="Separator"></div>
 
+    <section class="Reviews-section">
+      <h3>Happy Collectors</h3>
+      <div class="Reviews-grid">
+        <div class="Review-item">
+          <img src="/images/review1.jpeg" alt="Happy buyer with doll">
+        </div>
+        <div class="Review-item">
+          <img src="/images/review2.jpeg" alt="Happy buyer with doll">
+        </div>
+        <div class="Review-item">
+          <img src="/images/review4.jpg" alt="Happy buyer with doll">
+        </div>
+        <div class="Review-item">
+          <img src="/images/review3.jpg" alt="Happy buyer with doll">
+        </div>
+      </div>
+    </section>
+
+    <section class="Carousel-section">
+      <div class="Carousel">
+        <div class="Carousel-track" id="carouselTrack">
+          <div class="Carousel-slide">
+            <div class="Carousel-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="Carousel-quote">"Bought a doll from DodaDolls and I give her high recommendations. Well packed and good communication. Thank you, DodaDolls!"</p>
+            <p class="Carousel-author">- Katarina S.</p>
+          </div>
+          <div class="Carousel-slide">
+            <div class="Carousel-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="Carousel-quote">"Fantastic!"</p>
+            <p class="Carousel-author">- Peggy H.</p>
+          </div>
+          <div class="Carousel-slide">
+            <div class="Carousel-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="Carousel-quote">"Definitely recommend. Great dolls in wonderful condition, quick shipping and very nice seller. Understanding and cooperative and responds quickly."</p>
+            <p class="Carousel-author">- Gabriela P.</p>
+          </div>
+          <div class="Carousel-slide">
+            <div class="Carousel-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="Carousel-quote">"Again a 100% perfect service for the Barbie's. Great service, nice seller. Always correct. Perfect boxes and items always as described."</p>
+            <p class="Carousel-author">- Jens G.</p>
+          </div>
+        </div>
+        <div class="Carousel-arrows">
+          <button class="Carousel-arrow" onclick="moveCarousel(-1)">&#8249;</button>
+          <button class="Carousel-arrow" onclick="moveCarousel(1)">&#8250;</button>
+        </div>
+      </div>
+      <div class="Carousel-nav" id="carouselNav">
+        <button class="Carousel-dot active" onclick="goToSlide(0)"></button>
+        <button class="Carousel-dot" onclick="goToSlide(1)"></button>
+        <button class="Carousel-dot" onclick="goToSlide(2)"></button>
+        <button class="Carousel-dot" onclick="goToSlide(3)"></button>
+      </div>
+    </section>
+
+    <script>
+    (function() {
+      var currentSlide = 0;
+      var totalSlides = 4;
+      var track = document.getElementById('carouselTrack');
+      var dots = document.querySelectorAll('.Carousel-dot');
+
+      window.moveCarousel = function(direction) {
+        currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+        updateCarousel();
+      };
+
+      window.goToSlide = function(index) {
+        currentSlide = index;
+        updateCarousel();
+      };
+
+      function updateCarousel() {
+        track.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+        dots.forEach(function(dot, i) {
+          dot.classList.toggle('active', i === currentSlide);
+        });
+      }
+
+      // Auto-advance every 5 seconds
+      setInterval(function() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateCarousel();
+      }, 5000);
+    })();
+    </script>
+
+    <div class="Separator"></div>
+
     <div class="Links-row">
       <div class="Links-row-item Links-row-item--primary">
         <h3>Join my FB group</h3>
@@ -214,7 +439,7 @@
       </div>
     </div>
 
-    <p style="text-align: center;"><small>My deals are currently only available with shipment to EU countries.</small></p>
+    <p style="text-align: center;"><small>Doll deals are currently only available with shipment to EU countries.</small></p>
 
     <div class="Separator"></div>
 
