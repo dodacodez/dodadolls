@@ -32,6 +32,22 @@
     <link href="/common.css" rel="stylesheet" />
     <slot name="page-css"></slot>
 
+    <!-- Image protection styles -->
+    <style>
+      img {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        user-drag: none;
+        -webkit-touch-callout: none;
+      }
+    </style>
+
     <link rel="icon" type="image/jpeg" href="/images/favicon.jpg" />
     <script>
       document.addEventListener(
@@ -159,7 +175,6 @@
         <a href="https://instagram.com/dodadollstore" target="_blank"
           >Dollstore</a>
         <a href="https://www.tiktok.com/@dodadollstok" target="_blank">TikTok</a>
-        <a href="https://www.ebay.de/usr/dodadolls" target="_blank">eBay</a>
         <span style="flex: 1"></span>
         <a
           href="https://facebook.com/dodadolls"
@@ -232,6 +247,24 @@
         js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
         fjs.parentNode.insertBefore(js, fjs);
       })(document, "script", "facebook-jssdk");
+
+      // Image protection - disable right-click on images
+      document.addEventListener('contextmenu', function(e) {
+        if (e.target.tagName === 'IMG' || e.target.closest('img')) {
+          e.preventDefault();
+          e.stopPropagation();
+          return false;
+        }
+      }, true);
+
+      // Disable drag on images
+      document.addEventListener('dragstart', function(e) {
+        if (e.target.tagName === 'IMG') {
+          e.preventDefault();
+          e.stopPropagation();
+          return false;
+        }
+      }, true);
 
       // copy clipboard //
 
