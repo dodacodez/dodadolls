@@ -124,19 +124,28 @@
         gap: 1rem;
       }
       .Amazon-links a {
-        display: inline-block;
-        background: rgba(255, 255, 255, 0.2);
-        color: white;
-        padding: 0.6em 1.2em;
-        border-radius: 999px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-decoration: none;
+        color: white;
         font-family: 'Baloo Tamma 2', cursive;
-        transition: background 0.2s ease, transform 0.2s ease;
+        transition: transform 0.2s ease;
       }
       .Amazon-links a:hover {
-        background: rgba(255, 255, 255, 0.35);
-        transform: translateY(-2px);
-        text-decoration: none;
+        transform: translateY(-3px);
+      }
+      .Amazon-links img {
+        height: 180px;
+        width: auto;
+        object-fit: contain;
+        border-radius: 8px;
+        margin-bottom: 0.5rem;
+      }
+      .Amazon-links span {
+        font-size: 0.95rem;
+        text-align: center;
+        text-shadow: 0 1px 8px #0f960f;
       }
       .Reviews-section {
         margin: 2rem 0;
@@ -619,11 +628,26 @@
         <section class="Amazon-section">
           <h3>New Barbie Arrivals</h3>
           <div class="Amazon-links">
-            <a href="https://amzn.to/4qKEcIS" target="_blank">Ballet Wishes Doll</a>
-            <a href="https://amzn.to/4rpGJZ1" target="_blank">Debbie Allen Tribute</a>
-            <a href="https://amzn.to/4ta4UMJ" target="_blank">Dia De Muertos</a>
-            <a href="https://amzn.to/4a6sq4i" target="_blank">Lunar New Year</a>
-            <a href="https://amzn.to/4a35F1d" target="_blank">Basics You Create Kit</a>
+            <a href="https://amzn.to/4qKEcIS" target="_blank">
+              <img src="/images/balletwishes.webp" alt="Ballet Wishes Doll">
+              <span>Ballet Wishes Doll</span>
+            </a>
+            <a href="https://amzn.to/4rpGJZ1" target="_blank">
+              <img src="/images/debbieallen.webp" alt="Debbie Allen Tribute">
+              <span>Debbie Allen Tribute</span>
+            </a>
+            <a href="https://amzn.to/4ta4UMJ" target="_blank">
+              <img src="/images/diademuertos25.webp" alt="Dia De Muertos">
+              <span>Dia De Muertos</span>
+            </a>
+            <a href="https://amzn.to/4a6sq4i" target="_blank">
+              <img src="/images/lunarnewyear26.webp" alt="Lunar New Year">
+              <span>Lunar New Year</span>
+            </a>
+            <a href="https://amzn.to/4a35F1d" target="_blank">
+              <img src="/images/basicscreate.webp" alt="Basics You Create Kit">
+              <span>Basics You Create Kit</span>
+            </a>
           </div>
         </section>
       <p style="text-align: center; font-style: italic" ;=""><small>
