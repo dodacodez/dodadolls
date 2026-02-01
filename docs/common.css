@@ -358,3 +358,103 @@ html {
   transform: translateY(0);
   box-shadow: 0 6px 16px var(--cta-shadow);
 }
+
+/* Blog Styles - only applies to blog articles */
+.Blog-article {
+  font-family: 'Baloo Tamma 2', cursive;
+  max-width: 630px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Blog-article img {
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Center all direct content in blog article, then reset text */
+.Blog-article {
+  text-align: center;
+}
+
+.Blog-article h1,
+.Blog-article h2,
+.Blog-article h3,
+.Blog-article h4,
+.Blog-article p:not(:has(img)),
+.Blog-article ul,
+.Blog-article ol,
+.Blog-article li,
+.Blog-article blockquote,
+.Blog-article details,
+.Blog-article summary {
+  text-align: left;
+}
+
+/* Blog Hero Section */
+.Blog-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.Blog-hero-image img {
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+.Blog-hero-content {
+  font-family: 'Baloo Tamma 2', cursive;
+}
+.Blog-hero-subheader {
+  font-family: apercu-pro, -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0;
+  opacity: 0.85;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+/* First paragraph intro styling (for blogs without hero) */
+.Blog-article > p:first-of-type {
+  font-family: apercu-pro, -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+@media (min-width: 600px) {
+  .Blog-hero {
+    flex-direction: row-reverse;
+    text-align: left;
+  }
+  .Blog-hero-image {
+    flex: 1;
+  }
+  .Blog-hero-image img {
+    max-width: 100%;
+  }
+  .Blog-hero-content {
+    flex: 1;
+  }
+}
+
+/* Stacked hero variant for horizontal/wide images */
+.Blog-hero--stacked {
+  flex-direction: column;
+  text-align: center;
+}
+.Blog-hero--stacked .Blog-hero-image img {
+  max-width: 100%;
+}
+@media (min-width: 600px) {
+  .Blog-hero--stacked {
+    flex-direction: column;
+    text-align: center;
+  }
+}

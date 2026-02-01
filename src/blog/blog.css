@@ -83,9 +83,19 @@ summary > * {
   font-family: 'Baloo Tamma 2', cursive;
 }
 .Blog-hero-subheader {
+  font-family: apercu-pro, -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
   font-size: 1.1rem;
   margin: 0.5rem 0 0;
   opacity: 0.85;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+/* First paragraph intro styling (for blogs without hero) */
+.Blog-article > p:first-of-type {
+  font-family: apercu-pro, -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 1.1rem;
   line-height: 1.5;
 }
 @media (min-width: 600px) {
@@ -104,11 +114,42 @@ summary > * {
   }
 }
 
+/* Stacked hero variant for horizontal/wide images */
+.Blog-hero--stacked {
+  flex-direction: column;
+  text-align: center;
+}
+.Blog-hero--stacked .Blog-hero-image img {
+  max-width: 100%;
+}
+@media (min-width: 600px) {
+  .Blog-hero--stacked {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 /* Blog images consistent styling */
 .Blog-article img {
   border-radius: 8px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+/* Center all direct content in blog article, then reset text */
+.Blog-article {
+  text-align: center;
+}
+
+.Blog-article h1,
+.Blog-article h2,
+.Blog-article h3,
+.Blog-article h4,
+.Blog-article p:not(:has(img)),
+.Blog-article ul,
+.Blog-article ol,
+.Blog-article li,
+.Blog-article blockquote,
+.Blog-article details,
+.Blog-article summary {
+  text-align: left;
 }
