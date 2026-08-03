@@ -24,3 +24,50 @@ This is a pseudo-static website built with xm, a tiny HTML compiler.
 ## Design & Styling
 
 Stick to the current color scheme and styling without introducing new stuff unless strictly necessary, in which case you need to get the user approval first.
+
+### Blog Styling
+
+Blog posts use the `.Blog-article` wrapper class for consistent styling:
+
+- **Width**: 630px max-width, centered
+- **Images**: Centered by default via `text-align: center` on container. Side-by-side images work with inline `width` styles (e.g., `width: 45%`)
+- **First paragraph**: Uses apercu-pro font (header font), bold, 1.1rem - applies automatically via CSS
+- **Fonts**: Header font is `apercu-pro`, body/blog font is `Baloo Tamma 2`
+
+#### Hero Sections
+
+Two hero variants available:
+
+1. **Standard hero** (`.Blog-hero`): Image on right, text on left (on desktop). Use for portrait/square images.
+   ```html
+   <div class="Blog-hero">
+     <div class="Blog-hero-image"><img src="..." alt="..."></div>
+     <div class="Blog-hero-content">
+       <p class="Blog-hero-subheader"><strong>Date</strong> - Intro text...</p>
+     </div>
+   </div>
+   ```
+
+2. **Stacked hero** (`.Blog-hero--stacked`): Text on top, full-width image below. Use for horizontal/landscape images.
+   ```html
+   <div class="Blog-hero Blog-hero--stacked">
+     <div class="Blog-hero-content">...</div>
+     <div class="Blog-hero-image"><img src="..." alt="..."></div>
+   </div>
+   ```
+
+#### Blog Post Structure
+
+All blog posts must wrap content in `<div class="Blog-article">`:
+```html
+<fill name="content">
+<div class="Blog-article">
+  <!-- content here -->
+</div>
+</fill>
+```
+
+For posts without a hero, combine date and intro in the first paragraph:
+```
+<p><strong>Month Year</strong> - Intro sentence here...</p>
+```
