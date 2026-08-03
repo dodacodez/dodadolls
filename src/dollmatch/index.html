@@ -1,0 +1,80 @@
+<import src="/_base.html">
+  <fill name="title">Doll Match</fill>
+
+  <fill name="page-css">
+    <link href="/dollfinder/dollfinder.css" rel="stylesheet">
+  </fill>
+
+  <fill name="content">
+    <style>
+      .Dolls {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 1rem;
+      }
+      .Doll {
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 8px;
+        overflow: hidden;
+        font-family: 'Baloo Tamma 2', cursive;
+        text-align: center;
+      }
+      .Doll img {
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+        display: block;
+      }
+      .Doll-body {
+        padding: 0.5rem 0.6rem 0.8rem;
+      }
+      .Doll-name {
+        font-weight: bold;
+        line-height: 1.2;
+      }
+      .Doll-meta {
+        font-size: 0.85rem;
+        opacity: 0.85;
+        margin-top: 0.3rem;
+      }
+      .Doll-skin {
+        display: inline-block;
+        width: 0.8rem;
+        height: 0.8rem;
+        border-radius: 50%;
+        vertical-align: middle;
+        margin-right: 0.3rem;
+      }
+    </style>
+
+    <div class="Dolls" id="dolls"></div>
+
+    <script>
+      function html(strings, ...values) {
+        return strings.reduce(function (out, str, i) {
+          return out + str + (i < values.length ? values[i] : '');
+        }, '');
+      }
+
+      fetch('/dollmatch/data.json')
+        .then(function (res) { return res.json(); })
+        .then(function (dolls) {
+          console.log(dolls.length)
+          document.getElementById('dolls').innerHTML = dolls.map(function (/** @type {import('./data').Doll} */ d) {
+            var meta = [d.year, d.mattel_id].filter(Boolean).join(' · ');
+            var skin = d.skintone || {};
+            return html`
+              <div class="Doll">
+                ${d.image_url ? `<img src="${d.image_url}" alt="" loading="lazy">` : ''}
+                <div class="Doll-body">
+                  <div class="Doll-name">${d.name}</div>
+                  ${meta ? `<div class="Doll-meta">${meta}</div>` : ''}
+                  ${skin.color ? `<div class="Doll-meta"><span class="Doll-skin" style="background:${skin.color}"></span>${skin.name || ''}</div>` : ''}
+                </div>
+              </div>`;
+          }).join('');
+        });
+    </script>
+
+</fill>
+</import>
