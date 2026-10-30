@@ -477,3 +477,10 @@ html {
   font-style: italic;
   opacity: 0.7;
 }
+/* only while the banner exists - removing it restores the default spacing */
+.EventBanner ~ .Page {
+  margin-top: 0;
+}
+.EventBanner ~ .Page .Page-top h1 {
+  margin-top: 0.25em;
+}
