@@ -56,6 +56,31 @@
         margin-top: 2.5rem;
         margin-bottom: 2rem;
       }
+      .Dollfinder-event {
+        position: relative;
+        max-width: 630px;
+        margin: 3rem auto 2rem;
+        padding: 1.75rem 1.5rem 1rem;
+        border: 2px solid;
+        border-radius: 16px;
+        font-family: 'Baloo Tamma 2', cursive;
+        text-align: center;
+      }
+      .Dollfinder-event::before {
+        content: "\2605";
+        position: absolute;
+        top: -1.6rem;
+        left: 50%;
+        transform: translateX(-50%) rotate(-12deg);
+        font-size: 3rem;
+        line-height: 1;
+        color: #FFD700;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+      }
+      .Dollfinder-event h3 {
+        font-family: apercu-pro, -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+        margin: 0 0 0.5rem;
+      }
       .Dollfinder-hero-image {
         flex-shrink: 0;
       }
@@ -457,6 +482,14 @@
         </p>
       </article>
     </div>
+    <!-- Convention banner: auto-removed from 13.12.2026, delete afterwards -->
+    <a class="EventBanner" id="eventBanner" href="/blog/austria-fashion-doll-convention-2026">
+      Meet me at the <strong>Austria Fashion Doll Convention</strong> - 12.12.26, 2-6pm, Vienna &rarr;
+      <span class="EventBanner-de">Besucht mich auf der Austria Fashion Doll Convention - 12.12.26, 14-18 Uhr, Wien</span>
+    </a>
+    <script>
+      if (new Date() >= new Date("2026-12-13T00:00:00+01:00")) document.getElementById("eventBanner").remove();
+    </script>
     <div class="Page">
       <div class="Page-top">
         <h1>
@@ -520,6 +553,22 @@
         </p>
       </div>
     </section>
+
+    <!-- Convention specials: auto-removed from 13.12.2026, delete afterwards -->
+    <section class="Dollfinder-event" id="dollfinderEvent">
+      <h3>Convention specials - 12.12.26 only</h3>
+      <p>
+        Never before listed dolls, especially from the Barbie Basics metallic line, Black Label dolls and OOAKs.
+        Digital payment possible on site.
+      </p>
+      <p>
+        <strong>Austria Fashion Doll Convention</strong>, 2-6pm, VHS Floridsdorf, Vienna -
+        <a href="/blog/austria-fashion-doll-convention-2026">all details</a>
+      </p>
+    </section>
+    <script>
+      if (new Date() >= new Date("2026-12-13T00:00:00+01:00")) document.getElementById("dollfinderEvent").remove();
+    </script>
 
     <div class="Separator"></div>
 

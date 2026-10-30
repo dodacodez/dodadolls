@@ -458,3 +458,22 @@ html {
     text-align: center;
   }
 }
+
+.EventBanner {
+  display: block;
+  padding: 0.6em 1em;
+  background: var(--cta-bg);
+  color: var(--cta-text);
+  text-align: center;
+  text-decoration: none;
+}
+.EventBanner:hover {
+  background: var(--cta-bg-hover);
+  text-decoration: none;
+}
+.EventBanner-de {
+  display: block;
+  font-size: 0.85em;
+  font-style: italic;
+  opacity: 0.7;
+}
