@@ -60,6 +60,25 @@
 <script>
   if (new Date() >= new Date("2027-01-08T00:00:00+01:00")) document.getElementById("xmasBg").remove();
 </script>
+<style>
+  .Blog-article img.Blog-stamp {
+    float: right;
+    width: 170px;
+    margin: 0 0 1rem 1.5rem;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    transform: rotate(-6deg);
+  }
+  @media (max-width: 600px) {
+    .Blog-article img.Blog-stamp {
+      float: none;
+      display: block;
+      width: 140px;
+      margin: 0 auto 1rem;
+    }
+  }
+</style>
 <div class="Blog-article">
 <div class="Blog-hero">
   <div class="Blog-hero-image">
@@ -86,6 +105,8 @@
 
 It is the best time of the year for some Barbie joy! I cannot wait to surprise you with:
 
+<img class="Blog-stamp" src="/images/dodajewelry_superstar.jpg" alt="DodaDolls Jewelry pendant with a Superstar Barbie illustration in a rainbow frame" />
+
 - Never before seen or listed dolls
 - Christmas OOAKs
 - Rare Black Label dolls
@@ -94,7 +115,7 @@ It is the best time of the year for some Barbie joy! I cannot wait to surprise y
 
 ...and so much more! For larger purchases, I also accept digital payment on the spot.
 
-<p>
+<p style="clear: both">
   <img src="/images/dodajewelry_doll.jpg" alt="Redhead doll in front of DodaDolls Jewelry pendants" style="width: 45%; aspect-ratio: 3/4; object-fit: cover" />
   <img src="/images/dodajewelry_clips.jpg" alt="DodaDolls Jewelry hair clips with doll portraits on a branded card" style="width: 45%; aspect-ratio: 3/4; object-fit: cover" />
 </p>
