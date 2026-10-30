@@ -190,6 +190,64 @@
       <div id="fb-customer-chat" class="fb-customerchat"></div>
 
       <div class="content">
+<!-- Christmas decoration: auto-removed from 8.1.2027 -->
+<style>
+  .XmasBg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .XmasBg-scene {
+    position: absolute;
+    right: 1rem;
+    bottom: 0;
+    width: min(380px, 45vw);
+    opacity: 0.3;
+  }
+  .XmasBg-flake {
+    position: absolute;
+    top: -10px;
+    left: var(--x);
+    width: var(--s);
+    height: var(--s);
+    border-radius: 50%;
+    background: #fff;
+    opacity: 0.7;
+    animation: xmasFall var(--d) linear var(--delay) infinite;
+  }
+  .XmasBg-flake--star {
+    border-radius: 0;
+    background: url(/images/xmas-flake.svg) center / contain no-repeat;
+  }
+  @keyframes xmasFall {
+    to { transform: translate(40px, 105vh) rotate(360deg); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .XmasBg-flake { display: none; }
+  }
+</style>
+<div class="XmasBg" id="xmasBg" aria-hidden="true">
+  <img class="XmasBg-scene" src="/images/xmas-scene.svg" alt="">
+  <span class="XmasBg-flake XmasBg-flake--star" style="--x: 4%; --d: 13s; --s: 18px; --delay: -2s"></span>
+  <span class="XmasBg-flake" style="--x: 12%; --d: 17s; --s: 3px; --delay: -9s"></span>
+  <span class="XmasBg-flake XmasBg-flake--star" style="--x: 21%; --d: 11s; --s: 32px; --delay: -5s"></span>
+  <span class="XmasBg-flake" style="--x: 29%; --d: 15s; --s: 4px; --delay: -12s"></span>
+  <span class="XmasBg-flake XmasBg-flake--star" style="--x: 37%; --d: 19s; --s: 14px; --delay: -3s"></span>
+  <span class="XmasBg-flake" style="--x: 45%; --d: 12s; --s: 5px; --delay: -8s"></span>
+  <span class="XmasBg-flake XmasBg-flake--star" style="--x: 53%; --d: 16s; --s: 26px; --delay: -1s"></span>
+  <span class="XmasBg-flake" style="--x: 61%; --d: 14s; --s: 6px; --delay: -11s"></span>
+  <span class="XmasBg-flake XmasBg-flake--star" style="--x: 69%; --d: 18s; --s: 40px; --delay: -6s"></span>
+  <span class="XmasBg-flake" style="--x: 77%; --d: 13s; --s: 5px; --delay: -14s"></span>
+  <span class="XmasBg-flake XmasBg-flake--star" style="--x: 85%; --d: 16s; --s: 22px; --delay: -4s"></span>
+  <span class="XmasBg-flake" style="--x: 93%; --d: 12s; --s: 6px; --delay: -10s"></span>
+  <span class="XmasBg-flake XmasBg-flake--star" style="--x: 16%; --d: 20s; --s: 30px; --delay: -15s"></span>
+  <span class="XmasBg-flake" style="--x: 57%; --d: 21s; --s: 4px; --delay: -7s"></span>
+</div>
+<script>
+  if (new Date() >= new Date("2027-01-08T00:00:00+01:00")) document.getElementById("xmasBg").remove();
+</script>
 <div class="Blog-article">
 <div class="Blog-hero">
   <div class="Blog-hero-image">
@@ -234,7 +292,7 @@
 <p>Join the convention&#39;s <a href="https://www.facebook.com/groups/4487557581487619" target="_blank" rel="noopener noreferrer">Facebook group</a> for updates. Looking for something else or want to connect directly? Check my <a href="/dollfinder">Dollfinder</a>.</p>
 <img src="/images/afdc_prev4.jpg" alt="Vintage Francie and Skipper cases with boxed dolls at the September 2026 convention">
 
-<p><strong>A big shoutout to Kathi, the organizer, for bringing the doll community in Austria together and making these conventions happen - thank you!</strong></p>
+<p><strong>A big shoutout to KATHI, the organizer, for bringing the doll community in Austria together and making these conventions happen - thank you!</strong></p>
 
 <img src="/images/afdc_prev2.jpg" alt="Boxed Barbies, a Francie case and dolls on a sales table at the September 2026 convention">
 
