@@ -70,6 +70,33 @@
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
     transform: rotate(-6deg);
   }
+  @keyframes stampBounce {
+    30% { transform: rotate(4deg) translateY(-10px) scale(1.05); }
+    60% { transform: rotate(-9deg) translateY(0); }
+    80% { transform: rotate(-4deg) translateY(-3px); }
+  }
+  @keyframes stampNudge {
+    2% { transform: rotate(4deg) translateY(-10px) scale(1.05); }
+    4% { transform: rotate(-9deg) translateY(0); }
+    5% { transform: rotate(-4deg) translateY(-3px); }
+    6%, 100% { transform: rotate(-6deg); }
+  }
+  /* mouse: bounce on hover / touch: little nudge every 10s */
+  @media (hover: hover) {
+    .Blog-article img.Blog-stamp:hover {
+      animation: stampBounce 0.6s ease;
+    }
+  }
+  @media (hover: none) {
+    .Blog-article img.Blog-stamp {
+      animation: stampNudge 10s ease 2s infinite;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .Blog-article img.Blog-stamp {
+      animation: none !important;
+    }
+  }
   @media (max-width: 600px) {
     .Blog-article img.Blog-stamp {
       float: none;
@@ -146,7 +173,8 @@ Join the convention's <a href="https://www.facebook.com/groups/4487557581487619"
 <div lang="de" style="opacity: 0.7; font-style: italic; font-size: 0.9em">
   <p>Am 12.12.2026 bin ich von 14 bis 18 Uhr mit einem Verkaufsstand auf der Austria Fashion Doll Convention in der VHS Floridsdorf (Angerer Straße 14, 1210 Wien). Eintritt: 5 €, Kinder gratis.</p>
   <p>Mit dabei: noch nie gelistete Puppen, Weihnachts-OOAKs, seltene Black Label Puppen, Puppen aus der Barbie Basics Metallic-Linie und natürlich DodaDolls Jewelry – Anhänger und Haarspangen mit Puppenporträts. Bei größeren Einkäufen ist auch digitale Zahlung möglich.</p>
-  <p>Etwas auf meinen Socials entdeckt? <a href="https://instagram.com/dodadollstore" target="_blank" rel="noopener noreferrer">Schreib mir</a> und ich lege es dir für die Convention zurück. Ich freue mich auf euch!</p>
+  <p>Etwas auf meinen Socials entdeckt? <a href="https://instagram.com/dodadollstore" target="_blank" rel="noopener noreferrer">Schreib mir</a> und ich lege es dir für die Convention zurück.<br>
+  Ich freue mich auf euch!</p>
 </div>
 
 </markdown>
